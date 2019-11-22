@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Medium.ttf">
+            <string>SFUIText-Medium</string>
+        </array>
+        <array key="SFUIText-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PlacesCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2p-Aa-qkD">
+                        <rect key="frame" x="12" y="13" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                        <color key="textColor" red="0.27450980392156865" green="0.1803921568627451" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htp-qn-sQW">
+                        <rect key="frame" x="308" y="76.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="13"/>
+                        <color key="textColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-ln-Slp">
+                        <rect key="frame" x="12" y="21" width="291" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Htp-qn-sQW" secondAttribute="trailing" constant="12" id="Ktz-cj-WsF"/>
+                    <constraint firstItem="Noc-ln-Slp" firstAttribute="top" secondItem="j2p-Aa-qkD" secondAttribute="bottom" constant="8" id="ag2-33-wOq"/>
+                    <constraint firstItem="Htp-qn-sQW" firstAttribute="leading" secondItem="Noc-ln-Slp" secondAttribute="trailing" constant="5" id="gQJ-NH-TXr"/>
+                    <constraint firstItem="j2p-Aa-qkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="hPn-nX-239"/>
+                    <constraint firstItem="j2p-Aa-qkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="loe-YA-DFD"/>
+                    <constraint firstItem="Noc-ln-Slp" firstAttribute="leading" secondItem="j2p-Aa-qkD" secondAttribute="leading" id="tIc-vy-Omq"/>
+                    <constraint firstAttribute="bottom" secondItem="Htp-qn-sQW" secondAttribute="bottom" constant="13" id="xJL-I8-Snu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="lblPlaceAddress" destination="Noc-ln-Slp" id="ogj-Nc-Tas"/>
+                <outlet property="lblPlaceCountry" destination="Htp-qn-sQW" id="ia7-bo-kpI"/>
+                <outlet property="lblPlaceTitle" destination="j2p-Aa-qkD" id="6w5-UQ-hmq"/>
+            </connections>
+            <point key="canvasLocation" x="136" y="100"/>
+        </tableViewCell>
+    </objects>
+</document>
