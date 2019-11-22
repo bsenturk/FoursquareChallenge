@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainPageViewController.h"
+#import "LaunchScreenViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,10 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
-    UIViewController *mainPageViewController = [[MainPageViewController alloc]initWithNibName:@"MainPageViewController" bundle:nil];
-
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:mainPageViewController];
-    self.window.rootViewController = navigationController;
+    UIViewController *launchScreenViewController = [[LaunchScreenViewController alloc]initWithNibName:@"LaunchScreenViewController" bundle:nil];
+    self.window.rootViewController = launchScreenViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
