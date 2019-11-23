@@ -11,6 +11,7 @@
 
 @interface PlacesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSString *cellIdentifier;
 @end
 
 @implementation PlacesViewController
@@ -18,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Places";
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _cellIdentifier = @"PlacesCell";
 }
 
 - (void)setTableView:(UITableView *)tableView {

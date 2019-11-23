@@ -13,8 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;
 @property (weak, nonatomic) IBOutlet UITextField *placeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *areaTextField;
-
-@property UILabel *lblPlaceHolder;
 @end
 
 @implementation MainPageViewController
@@ -57,8 +55,21 @@
 }
 
 - (IBAction)btnSearchAction:(id)sender {
-    PlacesViewController *placesViewController = [[PlacesViewController alloc]initWithNibName:@"PlacesViewController" bundle:nil];
-    [self.navigationController pushViewController:placesViewController animated:YES];
+
+    if (self.placeTextField.text.length >= 3) {
+        PlacesViewController *placesViewController = [[PlacesViewController alloc]initWithNibName:@"PlacesViewController" bundle:nil];
+        [self.navigationController pushViewController:placesViewController animated:YES];
+    } else {
+        [self showAlert];
+    }
+}
+
+- (void) showAlert {
+    UIAlertController *alertController = [[AlertManager sharedInstance]showAlert:@"Lütfen mekan için en az 3 harf giriniz."];
+
+    [self presentViewController:alertController
+                       animated:YES
+                     completion:nil];
 }
 
 
