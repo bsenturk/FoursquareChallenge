@@ -21,6 +21,11 @@
 		FA0693D42386F97A0043BEDC /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0693D22386F97A0043BEDC /* MainPageViewController.m */; };
 		FA0693D52386F97A0043BEDC /* MainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0693D32386F97A0043BEDC /* MainPageViewController.xib */; };
 		FA653A5F2389805300C4E752 /* VenuesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A5E2389805300C4E752 /* VenuesResponse.m */; };
+		FA653A63238AC1D300C4E752 /* PlacesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A62238AC1D300C4E752 /* PlacesViewModel.m */; };
+		FA653A67238B231000C4E752 /* Venues.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A66238B231000C4E752 /* Venues.m */; };
+		FA653A6A238B233B00C4E752 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A69238B233B00C4E752 /* Location.m */; };
+		FA653A6D238B237B00C4E752 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A6C238B237B00C4E752 /* Categories.m */; };
+		FA653A70238B239500C4E752 /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A6F238B239500C4E752 /* Icon.m */; };
 		FA981E4523886B88009A23B9 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4423886B88009A23B9 /* AlertManager.m */; };
 		FA981E4E2389513A009A23B9 /* EndPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4D2389513A009A23B9 /* EndPoints.m */; };
 		FA9FBFDD2389553B0037E9DB /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FBFDC2389553B0037E9DB /* BaseRequest.m */; };
@@ -61,6 +66,16 @@
 		FA0693E82387067A0043BEDC /* SFUIText-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA653A5D2389805300C4E752 /* VenuesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenuesResponse.h; sourceTree = "<group>"; };
 		FA653A5E2389805300C4E752 /* VenuesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenuesResponse.m; sourceTree = "<group>"; };
+		FA653A61238AC1D300C4E752 /* PlacesViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesViewModel.h; sourceTree = "<group>"; };
+		FA653A62238AC1D300C4E752 /* PlacesViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesViewModel.m; sourceTree = "<group>"; };
+		FA653A65238B231000C4E752 /* Venues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Venues.h; sourceTree = "<group>"; };
+		FA653A66238B231000C4E752 /* Venues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Venues.m; sourceTree = "<group>"; };
+		FA653A68238B233B00C4E752 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		FA653A69238B233B00C4E752 /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		FA653A6B238B237B00C4E752 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		FA653A6C238B237B00C4E752 /* Categories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		FA653A6E238B239500C4E752 /* Icon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
+		FA653A6F238B239500C4E752 /* Icon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
 		FA981E4323886B88009A23B9 /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		FA981E4423886B88009A23B9 /* AlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
 		FA981E4C2389513A009A23B9 /* EndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndPoints.h; sourceTree = "<group>"; };
@@ -83,6 +98,7 @@
 		FA04AF2C2388517B0060F81E /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				FA653A60238AC1B300C4E752 /* PlacesViewModel */,
 				FA04AF2D238851A30060F81E /* PlacesViewController.h */,
 				FA04AF2E238851A30060F81E /* PlacesViewController.m */,
 				FA04AF2F238851A30060F81E /* PlacesViewController.xib */,
@@ -209,6 +225,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		FA653A60238AC1B300C4E752 /* PlacesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA653A61238AC1D300C4E752 /* PlacesViewModel.h */,
+				FA653A62238AC1D300C4E752 /* PlacesViewModel.m */,
+			);
+			path = PlacesViewModel;
+			sourceTree = "<group>";
+		};
 		FA981E46238950DB009A23B9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +258,14 @@
 			children = (
 				FA653A5D2389805300C4E752 /* VenuesResponse.h */,
 				FA653A5E2389805300C4E752 /* VenuesResponse.m */,
+				FA653A65238B231000C4E752 /* Venues.h */,
+				FA653A66238B231000C4E752 /* Venues.m */,
+				FA653A68238B233B00C4E752 /* Location.h */,
+				FA653A69238B233B00C4E752 /* Location.m */,
+				FA653A6B238B237B00C4E752 /* Categories.h */,
+				FA653A6C238B237B00C4E752 /* Categories.m */,
+				FA653A6E238B239500C4E752 /* Icon.h */,
+				FA653A6F238B239500C4E752 /* Icon.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,13 +354,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA04AF36238855550060F81E /* PlacesCell.m in Sources */,
+				FA653A6A238B233B00C4E752 /* Location.m in Sources */,
 				FA981E4523886B88009A23B9 /* AlertManager.m in Sources */,
 				FA981E4E2389513A009A23B9 /* EndPoints.m in Sources */,
 				FA0693D42386F97A0043BEDC /* MainPageViewController.m in Sources */,
+				FA653A70238B239500C4E752 /* Icon.m in Sources */,
 				FA9FBFDD2389553B0037E9DB /* BaseRequest.m in Sources */,
 				FA0693C92386F7BA0043BEDC /* main.m in Sources */,
 				FA653A5F2389805300C4E752 /* VenuesResponse.m in Sources */,
 				FA0693BB2386F7B90043BEDC /* AppDelegate.m in Sources */,
+				FA653A6D238B237B00C4E752 /* Categories.m in Sources */,
+				FA653A63238AC1D300C4E752 /* PlacesViewModel.m in Sources */,
+				FA653A67238B231000C4E752 /* Venues.m in Sources */,
 				FA04AF30238851A30060F81E /* PlacesViewController.m in Sources */,
 				FA04AF3C2388605F0060F81E /* LaunchScreenViewController.m in Sources */,
 			);

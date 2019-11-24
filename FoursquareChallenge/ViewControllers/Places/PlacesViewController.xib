@@ -25,8 +25,8 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="eel-US-IkM"/>
-                        <outlet property="delegate" destination="-1" id="HcB-Zr-iwn"/>
+                        <outlet property="dataSource" destination="-1" id="vOA-dr-4ne"/>
+                        <outlet property="delegate" destination="-1" id="iV1-MJ-wY0"/>
                     </connections>
                 </tableView>
             </subviews>

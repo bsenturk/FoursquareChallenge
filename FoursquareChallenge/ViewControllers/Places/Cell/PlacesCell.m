@@ -15,5 +15,11 @@
     // Initialization code
 }
 
+- (void)setVenues:(Venues *)venues {
+    self.lblPlaceTitle.text = venues.name;
+    self.lblPlaceAddress.text = venues.location.address;
+    self.lblPlaceCountry.text = venues.location.country;
+}
+
 
 @end
