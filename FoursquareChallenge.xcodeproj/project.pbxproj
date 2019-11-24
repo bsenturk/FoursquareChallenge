@@ -20,7 +20,10 @@
 		FA0693C92386F7BA0043BEDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0693C82386F7BA0043BEDC /* main.m */; };
 		FA0693D42386F97A0043BEDC /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0693D22386F97A0043BEDC /* MainPageViewController.m */; };
 		FA0693D52386F97A0043BEDC /* MainPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0693D32386F97A0043BEDC /* MainPageViewController.xib */; };
+		FA653A5F2389805300C4E752 /* VenuesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A5E2389805300C4E752 /* VenuesResponse.m */; };
 		FA981E4523886B88009A23B9 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4423886B88009A23B9 /* AlertManager.m */; };
+		FA981E4E2389513A009A23B9 /* EndPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4D2389513A009A23B9 /* EndPoints.m */; };
+		FA9FBFDD2389553B0037E9DB /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FBFDC2389553B0037E9DB /* BaseRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +59,14 @@
 		FA0693E62387067A0043BEDC /* SFUIText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.ttf"; sourceTree = "<group>"; };
 		FA0693E72387067A0043BEDC /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Medium.ttf"; sourceTree = "<group>"; };
 		FA0693E82387067A0043BEDC /* SFUIText-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FA653A5D2389805300C4E752 /* VenuesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenuesResponse.h; sourceTree = "<group>"; };
+		FA653A5E2389805300C4E752 /* VenuesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenuesResponse.m; sourceTree = "<group>"; };
 		FA981E4323886B88009A23B9 /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		FA981E4423886B88009A23B9 /* AlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
+		FA981E4C2389513A009A23B9 /* EndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndPoints.h; sourceTree = "<group>"; };
+		FA981E4D2389513A009A23B9 /* EndPoints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndPoints.m; sourceTree = "<group>"; };
+		FA9FBFDB2389553B0037E9DB /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		FA9FBFDC2389553B0037E9DB /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0693CF2386F7E50043BEDC /* Application */,
+				FA981E46238950DB009A23B9 /* Network */,
 				FA0693D02386F9660043BEDC /* ViewControllers */,
 				FA04AF3E2388624F0060F81E /* UIUtils */,
 				FA0693DB238706670043BEDC /* Utils */,
@@ -197,6 +207,43 @@
 				FA0693DD238706790043BEDC /* SFUIText-SemiboldItalic.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		FA981E46238950DB009A23B9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA981E4B2389510B009A23B9 /* EndPoint */,
+				FA981E4A23895106009A23B9 /* Model */,
+				FA981E4923895100009A23B9 /* Request */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA981E4923895100009A23B9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FA9FBFDB2389553B0037E9DB /* BaseRequest.h */,
+				FA9FBFDC2389553B0037E9DB /* BaseRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		FA981E4A23895106009A23B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA653A5D2389805300C4E752 /* VenuesResponse.h */,
+				FA653A5E2389805300C4E752 /* VenuesResponse.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA981E4B2389510B009A23B9 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FA981E4C2389513A009A23B9 /* EndPoints.h */,
+				FA981E4D2389513A009A23B9 /* EndPoints.m */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +322,11 @@
 			files = (
 				FA04AF36238855550060F81E /* PlacesCell.m in Sources */,
 				FA981E4523886B88009A23B9 /* AlertManager.m in Sources */,
+				FA981E4E2389513A009A23B9 /* EndPoints.m in Sources */,
 				FA0693D42386F97A0043BEDC /* MainPageViewController.m in Sources */,
+				FA9FBFDD2389553B0037E9DB /* BaseRequest.m in Sources */,
 				FA0693C92386F7BA0043BEDC /* main.m in Sources */,
+				FA653A5F2389805300C4E752 /* VenuesResponse.m in Sources */,
 				FA0693BB2386F7B90043BEDC /* AppDelegate.m in Sources */,
 				FA04AF30238851A30060F81E /* PlacesViewController.m in Sources */,
 				FA04AF3C2388605F0060F81E /* LaunchScreenViewController.m in Sources */,
