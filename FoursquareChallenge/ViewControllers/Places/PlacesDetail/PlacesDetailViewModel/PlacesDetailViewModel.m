@@ -35,14 +35,15 @@
 
         NSDictionary *photoDict = venuesArray[@"bestPhoto"];
 
-        NSString *prefix = photoDict[@"prefix"];
-        NSString *suffix = photoDict[@"suffix"];
+        if(photoDict[@"prefix"] != nil || photoDict[@"suffix"] != nil){
+            NSString *prefix = photoDict[@"prefix"];
+            NSString *suffix = photoDict[@"suffix"];
 
-        NSMutableString *photoUrl = NSMutableString.new;
-        [photoUrl appendString:prefix];
-        [photoUrl appendString:suffix];
-
-        self.imageUrl = photoUrl;
+            NSMutableString *photoUrl = NSMutableString.new;
+            [photoUrl appendString:prefix];
+            [photoUrl appendString:suffix];
+            self.imageUrl = photoUrl;
+        }
 
         NSArray *groupsArray = [tipsDict valueForKey:@"groups"];
 

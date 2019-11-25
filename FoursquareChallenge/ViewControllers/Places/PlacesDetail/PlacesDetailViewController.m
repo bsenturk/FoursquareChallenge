@@ -44,7 +44,8 @@
 }
 
 - (void)handleTapView: (UITapGestureRecognizer *)recognizer {
-    [self dismissViewControllerAnimated:true completion:nil];
+            [self dismissViewControllerAnimated:true completion:nil];
+
 }
 
 - (void)setupUI {
