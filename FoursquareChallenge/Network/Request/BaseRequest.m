@@ -41,9 +41,13 @@
     return httpMethod;
 }
 
-- (void)request: (NSDictionary *)urlParameters httpMethod:(HTTPMethod)method withCompletion:(void(^)(NSData *completionData))callback {
+- (void)request: (NSDictionary *)urlParameters urlPath:(NSString *)path httpMethod:(HTTPMethod)method withCompletion:(void(^)(NSData *completionData))callback {
 
-    NSURLComponents *components = [NSURLComponents componentsWithString:baseURL];
+    NSMutableString *urlString = NSMutableString.new;
+    [urlString appendString:baseURL];
+    [urlString appendString:path];
+
+    NSURLComponents *components = [NSURLComponents componentsWithString:urlString];
     NSMutableArray *queryArray = [NSMutableArray array];
     for (id key in urlParameters) {
         NSString *value = [urlParameters objectForKey:key];

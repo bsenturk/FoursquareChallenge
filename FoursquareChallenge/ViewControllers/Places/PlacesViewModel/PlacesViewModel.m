@@ -29,7 +29,7 @@
                                  @"v": @"20191123"
                                  };
 
-    [[BaseRequest sharedInstance]request:dictionary httpMethod:get withCompletion:^(NSData * _Nonnull completionData) {
+    [[BaseRequest sharedInstance]request:dictionary urlPath:searchPath httpMethod:get withCompletion:^(NSData * _Nonnull completionData) {
 
         NSDictionary *venuesJson = [NSJSONSerialization JSONObjectWithData:completionData options:NSJSONReadingAllowFragments error:nil];
 
@@ -76,6 +76,7 @@
                 icon.suffix = suffix;
 
                 categories.icon = icon;
+                venue.categories = categories;
 
             }
 
@@ -92,6 +93,11 @@
 
 - (NSUInteger)numberOfVenuesCount {
     return self.venues.count;
+}
+
+- (Venues *)didSelectVenue: (NSIndexPath *)indexPath{
+    Venues *selectedVenueObject = self.venues[indexPath.row];
+    return selectedVenueObject;
 }
 
 @end

@@ -11,6 +11,7 @@
 #import "BaseRequest.h"
 #import "VenuesResponse.h"
 #import "PlacesViewModel.h"
+#import "PlacesDetailViewController.h"
 
 @interface PlacesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -54,7 +55,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    PlacesDetailViewController *placesDetailViewController = [[PlacesDetailViewController alloc]initWithNibName:@"PlacesDetailViewController" bundle:nil];
+    placesDetailViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    placesDetailViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    placesDetailViewController.selectedVenue = [placesViewModel didSelectVenue:indexPath];
+    [self presentViewController:placesDetailViewController animated:true completion:nil];
 }
 
 

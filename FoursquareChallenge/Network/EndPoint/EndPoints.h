@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSString *baseURL;
 extern NSString *clientId;
 extern NSString *clientSecret;
+extern NSString *searchPath;
 @interface EndPoints : NSObject
 
 @end

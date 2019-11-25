@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)venuesRequest:(void (^)(void))completionBlock;
 - (NSUInteger)numberOfVenuesCount;
 @property NSMutableArray <Venues *> *venues;
+- (Venues *)didSelectVenue: (NSIndexPath *)indexPath;
 @end
 
 NS_ASSUME_NONNULL_END

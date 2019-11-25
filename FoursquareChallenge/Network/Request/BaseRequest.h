@@ -21,7 +21,7 @@ typedef enum HTTPMethod {
 
 @interface BaseRequest : NSObject
 +(instancetype)sharedInstance;
-- (void)request: (NSDictionary *)urlParameters httpMethod:(HTTPMethod)method withCompletion:(void(^)(NSData *completionData))callback;
+- (void)request: (NSDictionary *)urlParameters urlPath:(NSString *)path httpMethod:(HTTPMethod)method withCompletion:(void(^)(NSData *completionData))callback;
 @end
 
 NS_ASSUME_NONNULL_END
