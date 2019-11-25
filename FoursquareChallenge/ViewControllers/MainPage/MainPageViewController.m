@@ -64,7 +64,7 @@
     }
 }
 
-- (void) showAlert {
+- (void)showAlert {
     UIAlertController *alertController = [[AlertManager sharedInstance]showAlert:@"Lütfen mekan için en az 3 harf giriniz."];
 
     [self presentViewController:alertController

@@ -8,6 +8,7 @@
 
 #import "PlacesDetailViewController.h"
 #import "PlacesDetailViewModel.h"
+#import "ProgressManager.h"
 
 @interface PlacesDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -25,12 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [[ProgressManager sharedInstance]showAnimating:self.view];
+
     placesDetailViewModel = PlacesDetailViewModel.new;
     placesDetailViewModel.venueId = self.selectedVenue.venueId;
 
     [placesDetailViewModel venuesDetailRequest:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [self setData];
+            [[ProgressManager sharedInstance]stopAnimating];
         });
     }];
 

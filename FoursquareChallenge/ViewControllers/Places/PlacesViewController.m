@@ -12,6 +12,7 @@
 #import "VenuesResponse.h"
 #import "PlacesViewModel.h"
 #import "PlacesDetailViewController.h"
+#import "ProgressManager.h"
 
 @interface PlacesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -28,11 +29,14 @@
 
      placesViewModel = PlacesViewModel.new;
 
+    [[ProgressManager sharedInstance]showAnimating:self.view];
+
     [_tableView registerNib:[UINib nibWithNibName:cellIdentifier bundle:nil] forCellReuseIdentifier:cellIdentifier];
     _tableView.rowHeight = 90;
 
     [placesViewModel venuesRequest:^{
         dispatch_async(dispatch_get_main_queue(), ^{
+            [[ProgressManager sharedInstance]stopAnimating];
             [self.tableView reloadData];
         });
     }];

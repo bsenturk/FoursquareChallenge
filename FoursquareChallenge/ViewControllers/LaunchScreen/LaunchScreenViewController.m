@@ -23,7 +23,11 @@
         UIViewController *mainPageViewController = [[MainPageViewController alloc]initWithNibName:@"MainPageViewController" bundle:nil];
 
             UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:mainPageViewController];
-        appDelegate.window.rootViewController = navigationController;
+        [UIView transitionWithView:appDelegate.window
+                          duration:0.3
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{ appDelegate.window.rootViewController = navigationController; }
+                        completion:nil];
     });
 
 

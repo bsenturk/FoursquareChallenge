@@ -41,6 +41,7 @@
 		FA653A86238BC6CD00C4E752 /* SFUIText-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0693E0238706790043BEDC /* SFUIText-RegularItalic.ttf */; };
 		FA653A87238BC6CD00C4E752 /* SFUIText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0693E3238706790043BEDC /* SFUIText-Semibold.ttf */; };
 		FA653A88238BC6CD00C4E752 /* SFUIText-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0693DD238706790043BEDC /* SFUIText-SemiboldItalic.ttf */; };
+		FA653A8B238BDBF600C4E752 /* ProgressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA653A8A238BDBF600C4E752 /* ProgressManager.m */; };
 		FA981E4523886B88009A23B9 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4423886B88009A23B9 /* AlertManager.m */; };
 		FA981E4E2389513A009A23B9 /* EndPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = FA981E4D2389513A009A23B9 /* EndPoints.m */; };
 		FA9FBFDD2389553B0037E9DB /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FBFDC2389553B0037E9DB /* BaseRequest.m */; };
@@ -96,6 +97,8 @@
 		FA653A75238B950200C4E752 /* PlacesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesDetailViewController.xib; sourceTree = "<group>"; };
 		FA653A7A238BB35600C4E752 /* PlacesDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlacesDetailViewModel.h; sourceTree = "<group>"; };
 		FA653A7B238BB35600C4E752 /* PlacesDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlacesDetailViewModel.m; sourceTree = "<group>"; };
+		FA653A89238BDBF600C4E752 /* ProgressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressManager.h; sourceTree = "<group>"; };
+		FA653A8A238BDBF600C4E752 /* ProgressManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressManager.m; sourceTree = "<group>"; };
 		FA981E4323886B88009A23B9 /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		FA981E4423886B88009A23B9 /* AlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
 		FA981E4C2389513A009A23B9 /* EndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndPoints.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 			children = (
 				FA981E4323886B88009A23B9 /* AlertManager.h */,
 				FA981E4423886B88009A23B9 /* AlertManager.m */,
+				FA653A89238BDBF600C4E752 /* ProgressManager.h */,
+				FA653A8A238BDBF600C4E752 /* ProgressManager.m */,
 			);
 			path = UIUtils;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA653A8B238BDBF600C4E752 /* ProgressManager.m in Sources */,
 				FA04AF36238855550060F81E /* PlacesCell.m in Sources */,
 				FA653A76238B950200C4E752 /* PlacesDetailViewController.m in Sources */,
 				FA653A6A238B233B00C4E752 /* Location.m in Sources */,
