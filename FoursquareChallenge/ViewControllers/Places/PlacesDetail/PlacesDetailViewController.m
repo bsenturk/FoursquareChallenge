@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblVenueName;
 @property (weak, nonatomic) IBOutlet UILabel *lblTips;
 @property (weak, nonatomic) IBOutlet UILabel *lblVenueDescription;
+@property (weak, nonatomic) IBOutlet UIView *backView;
 @end
 
 @implementation PlacesDetailViewController
@@ -39,7 +40,7 @@
     }];
 
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapView:)];
-    [self.view addGestureRecognizer:tapGestureRecognizer];
+    [self.backView addGestureRecognizer:tapGestureRecognizer];
 
 }
 

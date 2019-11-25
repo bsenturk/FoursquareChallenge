@@ -23,6 +23,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesDetailViewController">
             <connections>
+                <outlet property="backView" destination="9pc-Fx-FTn" id="7t2-XA-eSU"/>
                 <outlet property="containerView" destination="c8L-np-b0v" id="HcM-Ws-tlx"/>
                 <outlet property="lblTips" destination="6BL-EI-jq0" id="NhK-5b-PvK"/>
                 <outlet property="lblVenueDescription" destination="lO6-oR-G1q" id="g0z-A8-Jkz"/>
@@ -37,6 +38,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-Fx-FTn">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8L-np-b0v">
                     <rect key="frame" x="32" y="130" width="350" height="646"/>
                     <subviews>
@@ -124,12 +129,16 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.66000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="c8L-np-b0v" secondAttribute="bottom" constant="86" id="3tT-w6-pA9"/>
                 <constraint firstItem="c8L-np-b0v" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="32" id="4Si-cM-RXd"/>
+                <constraint firstItem="9pc-Fx-FTn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NWv-gP-5JD"/>
                 <constraint firstItem="c8L-np-b0v" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="86" id="RWO-Q8-vk1"/>
+                <constraint firstItem="9pc-Fx-FTn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="aSM-fA-Egd"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="c8L-np-b0v" secondAttribute="trailing" constant="32" id="aUY-uX-9K9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="9pc-Fx-FTn" secondAttribute="trailing" id="nfa-iH-GIo"/>
+                <constraint firstAttribute="bottom" secondItem="9pc-Fx-FTn" secondAttribute="bottom" id="raw-zW-bZR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
