@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Main Page";
-
+    [self getUserLocation];
+    [self checkLocationPermission];
     [self setupUI];
 
 }
@@ -37,6 +38,25 @@
     [self.btnSearch setTitle:@"Search" forState:UIControlStateNormal];
     self.btnSearch.layer.cornerRadius = 6;
     [self buttonImageView: self.btnSearch];
+}
+
+- (void)getUserLocation {
+    self.locationManager = CLLocationManager.new;
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)checkLocationPermission {
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+
+    if(status == kCLAuthorizationStatusNotDetermined) {
+         [self.locationManager requestWhenInUseAuthorization];
+    }
+    else if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+
+    }
+
 }
 
 - (void) buttonImageView:(UIButton *)btn {
@@ -58,6 +78,10 @@
 
     if (self.placeTextField.text.length >= 3) {
         PlacesViewController *placesViewController = [[PlacesViewController alloc]initWithNibName:@"PlacesViewController" bundle:nil];
+        placesViewController.query = self.placeTextField.text;
+        placesViewController.lat = self.lat;
+        placesViewController.lng = self.lng;
+        placesViewController.city = self.areaTextField.text;
         [self.navigationController pushViewController:placesViewController animated:YES];
     } else {
         [self showAlert];
@@ -72,6 +96,11 @@
                      completion:nil];
 }
 
-
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *location = [locations lastObject];
+    self.lat = location.coordinate.latitude;
+    self.lng = location.coordinate.longitude;
+    self.locationManager.delegate = nil;
+}
 
 @end

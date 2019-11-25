@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)numberOfVenuesCount;
 @property NSMutableArray <Venues *> *venues;
 - (Venues *)didSelectVenue: (NSIndexPath *)indexPath;
+@property NSString *query;
+@property double lat;
+@property double lng;
+@property NSString *city;
 @end
 
 NS_ASSUME_NONNULL_END

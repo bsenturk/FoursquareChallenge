@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AlertManager.h"
+#import "CoreLocation/CoreLocation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainPageViewController : UIViewController
+@interface MainPageViewController : UIViewController <CLLocationManagerDelegate>
 
+@property CLLocationManager *locationManager;
+@property double lat;
+@property double lng;
 @end
 
 NS_ASSUME_NONNULL_END

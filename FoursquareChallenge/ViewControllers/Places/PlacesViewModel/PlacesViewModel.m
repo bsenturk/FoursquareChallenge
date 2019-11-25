@@ -21,15 +21,36 @@
 
 - (void)venuesRequest:(void (^)(void))completionBlock {
 
-    NSDictionary *dictionary = @{
+    NSDateFormatter *dateFormatter = NSDateFormatter.new;
+    [dateFormatter setDateFormat:@"yyyyMMdd"];
+
+    NSString *dateString = [dateFormatter stringFromDate:NSDate.new];
+
+    NSMutableString *ll = NSMutableString.new;
+
+    [ll appendString:@(self.lat).stringValue];
+    [ll appendString:@","];
+    [ll appendString:@(self.lng).stringValue];
+
+    NSDictionary *dictonary = @{
                                  @"client_id": clientId,
                                  @"client_secret": clientSecret,
-                                 @"query": @"bar",
-                                 @"near": @"Istanbul",
-                                 @"v": @"20191123"
+                                 @"query": self.query,
+                                 @"ll": ll,
+                                 @"v": dateString
                                  };
 
-    [[BaseRequest sharedInstance]request:dictionary urlPath:searchPath httpMethod:get withCompletion:^(NSData * _Nonnull completionData) {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params addEntriesFromDictionary:dictonary];
+
+    if(![self.city  isEqual: @""]) {
+        [params removeObjectForKey:@"ll"];
+        [params setObject:self.city forKey:@"near"];
+    }
+
+
+
+    [[BaseRequest sharedInstance]request:params urlPath:searchPath httpMethod:get withCompletion:^(NSData * _Nonnull completionData) {
 
         NSDictionary *venuesJson = [NSJSONSerialization JSONObjectWithData:completionData options:NSJSONReadingAllowFragments error:nil];
 
@@ -85,7 +106,6 @@
         }
 
         completionBlock();
-
 
     }];
 

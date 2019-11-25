@@ -28,12 +28,17 @@
     self.navigationItem.title = @"Places";
 
      placesViewModel = PlacesViewModel.new;
+    placesViewModel.query = self.query;
+    placesViewModel.lat = self.lat;
+    placesViewModel.lng = self.lng;
+    placesViewModel.city = self.city;
 
     [[ProgressManager sharedInstance]showAnimating:self.view];
 
     [_tableView registerNib:[UINib nibWithNibName:cellIdentifier bundle:nil] forCellReuseIdentifier:cellIdentifier];
     _tableView.rowHeight = 90;
 
+    //Venues search request
     [placesViewModel venuesRequest:^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [[ProgressManager sharedInstance]stopAnimating];
